@@ -19,7 +19,8 @@ function App() {
   // JSX
   return (
     <CartProvider>
-      <Header />
+      {cartIsShown && <Cart onClose={hideCartHandler} />}
+      <Header onShowCart={showCartHandler} />
       <main>
         <Meals />
       </main>
