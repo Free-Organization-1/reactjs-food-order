@@ -18,7 +18,8 @@ function App() {
   // JSX
   return (
     <CartProvider>
-      <Header />
+      {cartIsShown && <div>Cart...</div>}
+      <Header onShowCart={showCartHandler} />
       <main>
         <Meals />
       </main>
